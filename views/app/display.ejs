@@ -1,0 +1,24 @@
+<%- include ("../partials/header.ejs") %>
+
+<div class="students_container">
+    <% students.forEach(student => { %>
+        <div class="student_card">
+
+            <h3 class="name"><%= student.name %></h3>
+
+            <p><strong>ID:</strong> <%= student.id %></p>
+            <p><strong>Age:</strong> <%= student.age %></p>
+            <p><strong>Phone:</strong> <%= student.phone %></p>
+
+            <div class="phone_year">
+                <p><strong>Branch:</strong> <%= student.branch %></p>
+                <p><strong>Year:</strong> <%= student.year %></p>
+            </div>
+
+            <p class="cgpa"><strong>CGPA:</strong> <%= student.cgpa %></p>
+
+        </div>
+    <% }) %>
+</div>
+
+<%- include ("../partials/footer.ejs") %>
